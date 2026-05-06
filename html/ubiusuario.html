@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicaciones - Usuario</title>
+    <link rel="stylesheet" href="../css/ubiusuario.css">
+</head>
+<body>
+
+    <header class="navbar-admin">
+        <div class="logo">
+            <img src="../img/logo.png" alt="Logo"> </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Buscar">
+            <img src="../img/lupa.png" class="search-icon-img" alt="Buscar"> </div>
+
+        <div class="admin-actions">
+            <div class="profile-container">
+                <img src="../img/usuario.png" class="profile-pic" id="profilePic" alt="Usuario" style="cursor: pointer;"> </div>
+            <img src="../img/carrito.png" class="action-icon" alt="Carrito"> </div>
+    </header>
+
+    <nav class="admin-subnav">
+        <button class="nav-btn" onclick="window.location.href='usuario1.html'">Productos</button> <button class="nav-btn active">ubicaciones</button>
+        <button class="nav-btn" onclick="window.location.href='somosusuario.html'">¿Quienes somos?</button> </nav>
+
+    <main class="content-ubicaciones">
+        <h2 class="title-section">UBICACIONES:</h2>
+        
+        <div class="ubicaciones-container">
+            <div class="column">
+                <div class="location-item">
+                    <p><strong>Iztapalapa:</strong> Aldama s/n, Barrio San Lucas, C.P. 09000, Iztapalapa, CDMX.</p>
+                    <img src="../img/Iztapalapa.png" alt="Ubicación Iztapalapa" class="map-img">
+                </div>
+                <div class="location-item">
+                    <p><strong>Iztacalco:</strong> Oriente 255 número 431, esquina con Sur 24, col. Agrícola Oriental, C.P. 08500, Iztacalco, CDMX.</p>
+                    <img src="../img/Iztacalco.png" alt="Ubicación Iztacalco" class="map-img">
+                </div>
+                <div class="location-item">
+                    <p><strong>Nezahualcóyotl:</strong> Av. Adolfo López Mateos número 294, col. Evolución, C.P. 57700, Ciudad Nezahualcóyotl, Estado de México</p>
+                    <img src="../img/Neza.png" alt="Ubicación Nezahualcóyotl" class="map-img">
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="location-item">
+                    <p><strong>Tláhuac:</strong> Calle Severino Ceniceros s/n, col. San Pedro Tláhuac, C.P. 13070, Tláhuac, CDMX.</p>
+                    <img src="../img/tlahuac.png" alt="Ubicación Tláhuac" class="map-img large">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="logoutModal" class="modal-overlay">
+        <div class="modal-content">
+            <p>¿Desea cerrar sesión?</p>
+            <div class="modal-buttons">
+                <button class="btn-modal accept" onclick="window.location.href='producto1.html'">Aceptar</button>
+                <button class="btn-modal cancel" id="closeModal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const profilePic = document.getElementById('profilePic');
+        const modal = document.getElementById('logoutModal');
+        const btnCancel = document.getElementById('closeModal');
+
+        profilePic.onclick = function() {
+            modal.style.display = "flex";
+        }
+
+        btnCancel.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

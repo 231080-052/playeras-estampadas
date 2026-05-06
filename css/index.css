@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #d3d3d3;
+}
+
+/* --- ENCABEZADO --- */
+.navbar {
+    background: linear-gradient(to right, #3f90a5 0%, #7e7e7e 50%, #d35427 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 110px;
+}
+
+.logo img {
+    height: 95px;
+    background: white;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Barra de búsqueda */
+.search-container {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 30px;
+    padding: 2px 15px;
+    width: 450px; /* Ancho ajustable */
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Estilo para la nueva imagen lupa.png */
+.search-btn-img {
+    width: 25px; /* Tamaño ligeramente menor para caber dentro de la barra */
+    height: 25px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+/* --- ICONOS FUERA DE LA BARRA --- */
+.user-icons {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Espacio entre usuario y carrito */
+}
+
+.icon {
+    width: 35px; /* Tamaño consistente para usuario.png y carrito.png */
+    height: 35px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+/* Ajuste para el enlace del usuario */
+.user-icons a {
+    display: flex;
+    align-items: center;
+}
+
+/* --- NAVEGACIÓN (BOTONES ABAJO) --- */
+.sub-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.nav-btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    background: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-btn.dark {
+    background: #000 !important;
+    color: #fff !important;
+}

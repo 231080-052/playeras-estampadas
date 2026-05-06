@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiénes Somos - Admin</title>
+    <link rel="stylesheet" href="../css/somosadmin.css">
+</head>
+<body>
+
+    <!-- Encabezado con degradado e iconos solicitados -->
+    <header class="navbar-admin">
+        <div class="logo">
+            <img src="../img/logo.png" alt="Logo">
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Buscar">
+            <img src="../img/lupa.png" class="search-icon-img" alt="Buscar">
+        </div>
+
+        <div class="admin-actions">
+            <!-- Se reemplaza el carrito por el signo de mas -->
+            <img src="../img/carrito.png" class="action-icon" alt="Agregar">
+            
+            <div class="profile-container">
+                <!-- Al dar clic aquí se abre el modal de cerrar sesión -->
+                <img src="../img/usuario.png" class="profile-pic" id="profilePic" alt="Admin" style="cursor: pointer;">
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación secundaria -->
+    <nav class="admin-subnav">
+        <button class="nav-btn" onclick="window.location.href='usuario1.html'">Productos</button>
+        <button class="nav-btn" onclick="window.location.href='ubiusuario.html'">ubicaciones</button>
+        <button class="nav-btn active">¿Quienes somos?</button>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <main style="text-align: center; padding: 20px;">
+        <p style="margin-bottom: 20px; font-weight: bold;">
+            Nosotros somos una tienda de venta de playeras unitalla,<br>
+            estampadas con diseños únicos, marcas y colores.
+        </p>
+        </main>
+        <div class="hero-image">
+            <img src="../img/platano.png" alt="Playera Diseño">
+        </div>
+    </main>
+
+    <!-- Ventana Modal de Cerrar Sesión -->
+    <div id="logoutModal" class="modal-overlay">
+        <div class="modal-content">
+            <p>¿Desea cerrar sesión?</p>
+            <div class="modal-buttons">
+                <!-- Redirección a producto1.html al aceptar -->
+                <button class="btn-modal accept" onclick="window.location.href='producto1.html'">Aceptar</button>
+                <button class="btn-modal cancel" id="closeModal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const profilePic = document.getElementById('profilePic');
+        const modal = document.getElementById('logoutModal');
+        const btnCancel = document.getElementById('closeModal');
+
+        // Abrir ventana al hacer clic en la foto
+        profilePic.onclick = function() {
+            modal.style.display = "flex";
+        }
+
+        // Cerrar ventana al dar clic en cancelar
+        btnCancel.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Cerrar si se hace clic fuera del cuadro
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

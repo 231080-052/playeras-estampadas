@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Carrito - Camisetas Estampadas</title>
+    <link rel="stylesheet" href="../css/carrito.css">
+</head>
+<body>
+
+    <header class="navbar-admin">
+        <div class="header-left">
+            <!-- Flecha para regresar -->
+            <a href="usuario1.html" class="back-arrow">
+                <img src="../img/flecha.png" alt="Regresar" style="width: 30px;">
+            </a>
+            <div class="logo">
+                <img src="../img/logo.png" alt="Logo">
+            </div>
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Buscar">
+            <img src="../img/lupa.png" class="search-icon-img" alt="Buscar">
+        </div>
+
+        <div class="admin-actions">
+            <div class="profile-container">
+                <img src="../img/usuario.png" class="profile-pic" id="profilePic" alt="Usuario" style="cursor: pointer;">
+            </div>
+            <div class="cart-container">
+                <img src="../img/carrito.png" class="action-icon" alt="Carrito">
+                <span id="cart-count" class="cart-badge">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="cart-content">
+        <h2>Productos Seleccionados</h2>
+        
+        <div id="cart-items-container" class="cart-items-list">
+            <!-- Aquí se cargarán los productos dinámicamente -->
+            <p class="empty-msg">Tu carrito está vacío.</p>
+        </div>
+
+        <div class="cart-summary">
+            <div class="total-box">
+                <span>Total a pagar:</span>
+                <b id="cart-total">$0</b>
+            </div>
+            <!-- Modificado: Ahora redirige directamente a pagar.html -->
+            <button class="btn-pay" onclick="window.location.href='pagar.html'">PAGAR</button>
+        </div>
+    </main>
+
+    <!-- Modal de Cerrar Sesión -->
+    <div id="logoutModal" class="modal-overlay">
+        <div class="modal-content">
+            <p>¿Desea cerrar sesión?</p>
+            <div class="modal-buttons">
+                <button class="btn-modal accept" onclick="window.location.href='producto1.html'">Aceptar</button>
+                <button class="btn-modal cancel" id="closeModal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Lógica del Modal
+        const profilePic = document.getElementById('profilePic');
+        const modal = document.getElementById('logoutModal');
+        const btnCancel = document.getElementById('closeModal');
+        const cartBadge = document.getElementById('cart-count');
+
+        profilePic.onclick = () => modal.style.display = "flex";
+        btnCancel.onclick = () => modal.style.display = "none";
+        window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; };
+    </script>
+</body>
+</html>

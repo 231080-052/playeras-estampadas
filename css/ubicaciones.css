@@ -1,0 +1,145 @@
+/* Importación de fuente robusta */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #d3d3d3; /* Fondo gris claro */
+}
+
+/* --- ENCABEZADO (NAVBAR) --- */
+.navbar {
+    background: linear-gradient(to right, #3f90a5 0%, #7e7e7e 50%, #d35427 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuye logo, buscador e iconos */
+    padding: 0 40px;
+    height: 110px;
+}
+
+.logo img {
+    height: 95px;
+    background: white;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Barra de búsqueda */
+.search-container {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 30px;
+    padding: 2px 15px;
+    width: 450px;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Imagen de la lupa dentro de la barra */
+.search-btn-img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+/* Iconos de Usuario y Carrito fuera de la barra */
+.user-icons {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.user-icons a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.icon {
+    width: 35px; /* Tamaño consistente para usuario.png y carrito.png */
+    height: 35px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+/* --- NAVEGACIÓN SECUNDARIA --- */
+.sub-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.nav-btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    background: white;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-btn.dark {
+    background: #000 !important;
+    color: #fff !important;
+}
+
+/* --- SECCIÓN DE UBICACIONES --- */
+.container {
+    padding: 20px 50px;
+}
+
+.title {
+    font-weight: 900;
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.grid-ubicaciones {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas para las sucursales */
+    gap: 40px;
+}
+
+.item-ubicacion {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-ubicacion p {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    color: #000;
+}
+
+.item-ubicacion img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border: 1px solid #999;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}

@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #e0e0e0; /* Fondo gris claro como en tus capturas */
+}
+
+/* Header con degradado característico */
+.navbar-admin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background: linear-gradient(to right, #3498db, #4e4e4e, #e67e22);
+    height: 80px;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.search-box {
+    background: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    width: 300px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.profile-pic {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+/* Contenedor del Formulario */
+.container-full {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.form-container {
+    background: white;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 30px;
+}
+
+.header-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.back-btn {
+    text-decoration: none;
+    color: #666;
+    font-weight: bold;
+}
+
+/* Grid del formulario */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 30px;
+}
+
+/* Área de subida de imagen */
+.image-placeholder {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border: 3px dashed #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: #f9f9f9;
+    color: #999;
+}
+
+.image-placeholder img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+/* Detalles */
+.details-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+.input-group input, .input-group textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.btn-save {
+    background: #333; /* Botones oscuros como en tu interfaz de pago */
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-save:hover {
+    background: #000;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Contenedor del buscador */
+.search-box {
+    background: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    width: 250px; /* Tamaño controlado del buscador */
+    height: 35px;  /* Altura fija para alineación */
+    overflow: hidden; /* Evita que la lupa se salga si es muy grande */
+}
+
+/* El campo de texto */
+.search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* LA LUPA: Aquí es donde ajustamos el tamaño */
+.search-icon-img {
+    height: 20px;  /* Tamaño pequeño y estandarizado */
+    width: auto;   /* Mantiene la proporción */
+    margin-left: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.search-icon-img:hover {
+    transform: scale(1.1); /* Efecto sutil al pasar el mouse */
+}

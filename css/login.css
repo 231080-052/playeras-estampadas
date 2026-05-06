@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body.login-page {
+    background-color: #d3d3d3;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- ENCABEZADO --- */
+.navbar-login {
+    background: linear-gradient(to right, #00bfff 0%, #7e7e7e 50%, #d35427 100%);
+    height: 110px;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+}
+
+.logo-box img {
+    height: 95px;
+    background: white;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.login-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.login-card {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* --- CAMPOS DE ENTRADA --- */
+.input-field {
+    margin-bottom: 20px;
+}
+
+.input-field label {
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #000;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+}
+
+.input-field input::placeholder {
+    color: #999;
+}
+
+/* --- BOTÓN E INICIO ADMIN --- */
+.actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn-beige {
+    width: 100%;
+    background-color: #e0d8c0;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    color: #000;
+    transition: background 0.3s;
+}
+
+.btn-beige:hover {
+    background-color: #d2c8ae;
+}
+
+/* --- ELIMINAR COLOR MORADO --- */
+.actions a, 
+.extra-links a {
+    text-decoration: underline;
+    font-size: 16px;
+    color: #3e128c !important; /* Azul/Violeta oscuro pero fijo */
+    cursor: pointer;
+}
+
+/* Forzar que no cambie a morado al ser visitado */
+.actions a:visited, 
+.extra-links a:visited {
+    color: #3e128c !important;
+}
+
+.extra-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.extra-links a {
+    color: #000 !important; /* El link de crear cuenta es negro en la imagen */
+    text-decoration: none;
+}
+
+/* --- BOTÓN REGRESAR --- */
+.navigation-footer {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.back-arrow-img {
+    width: 35px;
+    height: auto;
+    object-fit: contain;
+}

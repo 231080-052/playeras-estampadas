@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicaciones - Administrador</title>
+    <!-- Ruta ajustada a la carpeta css -->
+    <link rel="stylesheet" href="../css/ubiadmin.css">
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header class="navbar-admin">
+        <div class="logo">
+            <img src="../img/logo.png" alt="Logo">
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Buscar">
+            <img src="../img/lupa.png" class="search-icon-img" alt="Buscar">
+        </div>
+
+        <div class="admin-actions">
+            <!-- Foto de perfil con función de cierre de sesión -->
+            <img src="../img/admin.png" class="profile-pic" id="profilePic" alt="Admin" style="cursor: pointer;">
+            
+            <!-- Sustitución de carrito por mas.png -->
+            <img src="../img/mas.png" class="action-icon" alt="Agregar">
+        </div>
+    </header>
+
+    <!-- Navegación -->
+    <nav class="admin-subnav">
+        <!-- Redirección a admin1.html -->
+        <button class="nav-btn" onclick="window.location.href='admin1.html'">Productos</button>
+        <button class="nav-btn active">ubicaciones</button>
+        <!-- Redirección a somosadmin.html -->
+        <button class="nav-btn" onclick="window.location.href='somosadmin.html'">¿Quienes somos?</button>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="content-layout">
+        <h2 class="section-title">UBICACIONES:</h2>
+        
+        <div class="locations-grid">
+            <!-- Columna Izquierda -->
+            <div class="locations-column">
+                <div class="location-card">
+                    <p><strong>Iztapalapa:</strong> Aldama s/n, Barrio San Lucas, C.P. 09000, Iztapalapa, CDMX.</p>
+                    <img src="../img/Iztapalapa.png" alt="Iztapalapa">
+                </div>
+                <div class="location-card">
+                    <p><strong>Iztacalco:</strong> Oriente 255 número 431, esquina con Sur 24, col. Agrícola Oriental, C.P. 08500, Iztacalco, CDMX.</p>
+                    <img src="../img/Iztacalco.png" alt="Iztacalco">
+                </div>
+                <div class="location-card">
+                    <p><strong>Nezahualcóyotl:</strong> Av. Adolfo López Mateos número 294, col. Evolución, C.P. 57700, Ciudad Nezahualcóyotl, Estado de México</p>
+                    <img src="../img/Neza.png" alt="Nezahualcóyotl">
+                </div>
+            </div>
+
+            <!-- Columna Derecha -->
+            <div class="locations-column">
+                <div class="location-card">
+                    <p><strong>Tláhuac:</strong> Calle Severino Ceniceros s/n, col. San Pedro Tláhuac, C.P. 13070, Tláhuac, CDMX.</p>
+                    <img src="../img/tlahuac.png" alt="Tláhuac" class="img-large">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal de Cierre de Sesión -->
+    <div id="logoutModal" class="modal-overlay">
+        <div class="modal-content">
+            <p>¿Desea cerrar sesión?</p>
+            <div class="modal-buttons">
+                <!-- Redirige a la página principal de productos (vista cliente) -->
+                <button class="btn-modal accept" onclick="window.location.href='producto1.html'">Aceptar</button>
+                <button class="btn-modal cancel" id="closeModal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const profilePic = document.getElementById('profilePic');
+        const modal = document.getElementById('logoutModal');
+        const btnCancel = document.getElementById('closeModal');
+
+        profilePic.onclick = function() {
+            modal.style.display = "flex";
+        }
+
+        btnCancel.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

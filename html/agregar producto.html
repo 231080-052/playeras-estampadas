@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Producto - Admin</title>
+    <link rel="stylesheet" href="../css/agregar producto.css">
+</head>
+<body>
+
+    <header class="navbar-admin">
+        <div class="logo">
+            <img src="../img/logo.png" alt="Logo">
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Buscar">
+            <img src="../img/lupa.png" class="search-icon-img" alt="Buscar">
+        </div>
+
+        <div class="admin-actions">
+            <div class="profile-container">
+                <img src="../img/admin.png" class="profile-pic" id="profilePic" alt="Admin" style="cursor: pointer;">
+            </div>
+        </div>
+    </header>
+
+    <main class="container-full">
+        <section class="form-container">
+            <div class="header-form">
+                <a href="admin1.html" class="back-btn">Volver</a>
+                <h2>Agregar Nuevo Producto</h2>
+            </div>
+
+            <form id="add-product-form">
+                <div class="form-grid">
+                    <div class="image-upload-section">
+                        <label for="image-input" class="image-placeholder" id="image-label">
+                            <img src="../img/mas.png" alt="Subir" id="preview-img">
+                            <span>Subir Imagen</span>
+                        </label>
+                        <input type="file" id="image-input" accept="image/*" hidden>
+                    </div>
+
+                    <div class="details-section">
+                        <div class="input-group">
+                            <label>Nombre del Producto</label>
+                            <input type="text" placeholder="Ej: Playera Goku" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Precio</label>
+                            <input type="number" placeholder="$0.00" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Descripción</label>
+                            <textarea placeholder="Detalles del diseño..." rows="4"></textarea>
+                        </div>
+
+                        <div class="button-group">
+                            <button type="submit" class="btn-save">Guardar Producto</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        // Vista previa de la imagen seleccionada
+        const imageInput = document.getElementById('image-input');
+        const previewImg = document.getElementById('preview-img');
+
+        imageInput.onchange = (e) => {
+            const [file] = imageInput.files;
+            if (file) {
+                previewImg.src = URL.createObjectURL(file);
+                previewImg.style.width = "100%";
+                previewImg.style.height = "100%";
+                previewImg.style.objectFit = "contain";
+            }
+        };
+    </script>
+</body>
+</html>

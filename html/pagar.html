@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos de Transferencia - Camisetas Estampadas</title>
+    <link rel="stylesheet" href="../css/pagar.css">
+</head>
+<body>
+
+    <div class="full-screen-container">
+        <!-- Encabezado dentro del formulario -->
+        <header class="form-header">
+            <div class="header-content">
+                <h2>Datos de Transferencia</h2>
+                <a href="carrito.html" class="close-btn">&times;</a>
+            </div>
+        </header>
+
+        <!-- Formulario de Datos -->
+        <main class="form-body">
+            <form id="paymentForm">
+                <div class="input-group">
+                    <label>Origen</label>
+                    <input type="text" placeholder="Cuenta de origen" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Destino</label>
+                    <input type="text" placeholder="Cuenta de destino" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Comisión</label>
+                    <input type="text" placeholder="$0.00" readonly>
+                </div>
+
+                <div class="input-group">
+                    <label>Concepto</label>
+                    <input type="text" placeholder="Motivo del pago">
+                </div>
+
+                <div class="input-group">
+                    <label>Referencia</label>
+                    <input type="text" placeholder="0123456789" readonly>
+                </div>
+
+                <div class="input-group">
+                    <label>Tipo de Operación</label>
+                    <input type="text" placeholder="Transferencia Electrónica" readonly>
+                </div>
+
+                <div class="input-group">
+                    <label>Folio</label>
+                    <input type="text" placeholder="FOLIO001" readonly>
+                </div>
+
+                <div class="input-group">
+                    <label>Fecha</label>
+                    <input type="date" value="2026-05-03">
+                </div>
+
+                <div class="button-container">
+                    <button type="submit" class="btn-submit">Realizar pago</button>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <script>
+        // Lógica para procesar el pago o limpiar el carrito tras éxito
+        document.getElementById('paymentForm').onsubmit = (e) => {
+            e.preventDefault();
+            alert('¡Pago realizado con éxito!');
+            localStorage.removeItem('myCart'); // Limpia el carrito
+            window.location.href = 'usuario1.html'; // Regresa al inicio
+        };
+    </script>
+</body>
+</html>

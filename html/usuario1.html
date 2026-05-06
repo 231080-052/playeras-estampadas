@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos - Usuario</title>
+    <link rel="stylesheet" href="../css/productos usuarios.css">
+</head>
+<body>
+
+    <header class="navbar-admin">
+        <div class="logo">
+            <img src="../img/logo.png" alt="Logo">
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Buscar">
+            <img src="../img/lupa.png" class="search-icon-img" alt="Buscar">
+        </div>
+
+        <div class="admin-actions">
+            <div class="profile-container">
+                <img src="../img/usuario.png" class="profile-pic" id="profilePic" alt="Usuario" style="cursor: pointer;">
+            </div>
+            
+            <!-- Carrito convertido en enlace (Contador eliminado) -->
+            <div class="cart-container">
+                <a href="carrito.html" id="cart-link" style="text-decoration: none; position: relative; display: flex;">
+                    <img src="../img/carrito.png" class="action-icon" alt="Carrito">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="admin-subnav">
+        <button class="nav-btn active">Productos</button>
+        <button class="nav-btn" onclick="window.location.href='ubiusuario.html'">Ubicaciones</button> 
+        <button class="nav-btn" onclick="window.location.href='somosusuario.html'">¿Quienes somos?</button>
+    </nav>
+
+    <main class="content">
+        <div class="product-grid">
+            <!-- 1. Goku -->
+            <div class="product-card" data-name="Goku" data-price="250" data-img="../img/pgoku.png">
+                <img src="../img/pgoku.png" alt="Goku">
+                <div class="card-info"><p>Goku</p><b>$250</b></div>
+                <div class="quantity-container">
+                    <div class="quantity-control">
+                        <button class="btn-qty minus">-</button>
+                        <span class="qty-number">0</span>
+                        <button class="btn-qty plus">+</button>
+                    </div>
+                    <button class="btn-add-cart">Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- 2. Homero -->
+            <div class="product-card" data-name="Homero" data-price="250" data-img="../img/phomero.png">
+                <img src="../img/phomero.png" alt="Homero">
+                <div class="card-info"><p>Homero</p><b>$250</b></div>
+                <div class="quantity-container">
+                    <div class="quantity-control">
+                        <button class="btn-qty minus">-</button>
+                        <span class="qty-number">0</span>
+                        <button class="btn-qty plus">+</button>
+                    </div>
+                    <button class="btn-add-cart">Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- 3. Yin y Yang -->
+            <div class="product-card" data-name="Yin y Yang" data-price="250" data-img="../img/pjapon.png">
+                <img src="../img/pjapon.png" alt="Yin y Yang">
+                <div class="card-info"><p>Yin y Yang</p><b>$250</b></div>
+                <div class="quantity-container">
+                    <div class="quantity-control">
+                        <button class="btn-qty minus">-</button>
+                        <span class="qty-number">0</span>
+                        <button class="btn-qty plus">+</button>
+                    </div>
+                    <button class="btn-add-cart">Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- 4. Oso -->
+            <div class="product-card" data-name="Oso" data-price="250" data-img="../img/poso.png">
+                <img src="../img/poso.png" alt="Oso">
+                <div class="card-info"><p>Oso</p><b>$250</b></div>
+                <div class="quantity-container">
+                    <div class="quantity-control">
+                        <button class="btn-qty minus">-</button>
+                        <span class="qty-number">0</span>
+                        <button class="btn-qty plus">+</button>
+                    </div>
+                    <button class="btn-add-cart">Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- 5. Paleta -->
+            <div class="product-card" data-name="Paleta derretida" data-price="250" data-img="../img/ppaleta.png">
+                <img src="../img/ppaleta.png" alt="Paleta derretida">
+                <div class="card-info"><p>Paleta derretida</p><b>$250</b></div>
+                <div class="quantity-container">
+                    <div class="quantity-control">
+                        <button class="btn-qty minus">-</button>
+                        <span class="qty-number">0</span>
+                        <button class="btn-qty plus">+</button>
+                    </div>
+                    <button class="btn-add-cart">Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- 6. Plátano -->
+            <div class="product-card" data-name="Me la p-las" data-price="250" data-img="../img/platano.png">
+                <img src="../img/platano.png" alt="Me la p-las">
+                <div class="card-info"><p>Me la p-las</p><b>$250</b></div>
+                <div class="quantity-container">
+                    <div class="quantity-control">
+                        <button class="btn-qty minus">-</button>
+                        <span class="qty-number">0</span>
+                        <button class="btn-qty plus">+</button>
+                    </div>
+                    <button class="btn-add-cart">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="admin-pagination">
+        <div class="pag-container">
+            <span class="page-num active">1</span>
+            <a href="usuario2.html" class="page-num">2</a>
+            <a href="usuario3.html" class="page-num">3</a>
+            <a href="usuario2.html" class="page-btn-text">Siguiente</a>
+        </div>
+    </footer>
+
+    <!-- Modal de Cerrar Sesión -->
+    <div id="logoutModal" class="modal-overlay">
+        <div class="modal-content">
+            <p>¿Desea cerrar sesión?</p>
+            <div class="modal-buttons">
+                <button class="btn-modal accept" onclick="window.location.href='producto1.html'">Aceptar</button>
+                <button class="btn-modal cancel" id="closeModal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const profilePic = document.getElementById('profilePic');
+        const modal = document.getElementById('logoutModal');
+        const btnCancel = document.getElementById('closeModal');
+
+        // Inicializar carrito desde localStorage o vacío
+        let cart = JSON.parse(localStorage.getItem('myCart')) || [];
+
+        profilePic.onclick = () => modal.style.display = "flex";
+        btnCancel.onclick = () => modal.style.display = "none";
+        window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; };
+
+        const cards = document.querySelectorAll('.product-card');
+        cards.forEach(card => {
+            const minus = card.querySelector('.minus');
+            const plus = card.querySelector('.plus');
+            const qty = card.querySelector('.qty-number');
+            const addBtn = card.querySelector('.btn-add-cart');
+            let count = 0;
+
+            plus.onclick = () => { count++; qty.innerText = count; };
+            minus.onclick = () => { if(count > 0) { count--; qty.innerText = count; } };
+            
+            addBtn.onclick = () => {
+                if(count > 0) {
+                    const productData = {
+                        name: card.getAttribute('data-name'),
+                        price: parseInt(card.getAttribute('data-price')),
+                        img: card.getAttribute('data-img'),
+                        quantity: count
+                    };
+
+                    const existingIndex = cart.findIndex(item => item.name === productData.name);
+                    if(existingIndex > -1) {
+                        cart[existingIndex].quantity += count;
+                    } else {
+                        cart.push(productData);
+                    }
+
+                    localStorage.setItem('myCart', JSON.stringify(cart));
+                    
+                    count = 0;
+                    qty.innerText = 0;
+                    alert("Producto agregado al carrito");
+                }
+            };
+        });
+    </script>
+</body>
+</html>

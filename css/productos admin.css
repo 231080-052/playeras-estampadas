@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #d3d3d3;
+}
+
+/* --- NAVBAR --- */
+.navbar-admin {
+    background: linear-gradient(to right, #00bfff 0%, #7e7e7e 50%, #d35427 100%);
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.logo img {
+    height: 95px;
+    background: white;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-box {
+    background: white;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    width: 350px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 8px;
+}
+
+.search-icon-img {
+    width: 20px;
+    height: 20px;
+}
+
+.admin-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.action-icon {
+    width: 35px;
+    height: 35px;
+}
+
+.profile-pic {
+    width: 60px;
+    height: 60px;
+    border: 2px solid white;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+/* --- SUBNAV (BOTONES TIPO CÁPSULA) --- */
+.main-nav{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.nav-btn {
+    /* Limpieza de estilos por defecto del navegador */
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    outline: none;
+
+    /* Diseño de cápsula */
+    padding: 12px 35px;
+    border-radius: 50px; /* Esto crea los bordes totalmente circulares */
+    background-color: white;
+    
+    /* Texto */
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+    
+    /* Interacción */
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-btn.active {
+    background-color: #333; /* El color oscuro para el botón seleccionado */
+    color: white;
+}
+
+.nav-btn:hover {
+    background-color: #f5f5f5;
+}
+
+/* --- GRID DE PRODUCTOS --- */
+.content {
+    padding: 10px 80px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding-bottom: 10px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    background-color: #e0e0e0;
+}
+
+.card-info {
+    padding: 15px;
+}
+
+.card-info p { font-weight: bold; margin-bottom: 5px; }
+
+/* --- PAGINACIÓN (BOTONES CUADRADOS) --- */
+.admin-pagination {
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.pag-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.page-num, .page-btn-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.page-num { width: 45px; height: 45px; font-size: 20px; }
+.page-btn-text { height: 45px; padding: 0 20px; font-size: 20px; }
+
+.page-num.active {
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+/* --- MODAL --- */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    width: 300px;
+}
+
+.modal-content p {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.btn-modal {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-modal.accept { background-color: #333; color: white; }
+.btn-modal.cancel { background-color: #eee; color: #333; }
