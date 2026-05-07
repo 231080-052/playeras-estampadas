@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ubicaciones - Administrador</title>
-    <!-- Ruta ajustada a la carpeta css -->
     <link rel="stylesheet" href="../css/ubiadmin.css">
 </head>
 <body>
 
-    <!-- Encabezado -->
     <header class="navbar-admin">
         <div class="logo">
             <img src="../img/logo.png" alt="Logo">
@@ -21,29 +19,22 @@
         </div>
 
         <div class="admin-actions">
-            <!-- Foto de perfil con función de cierre de sesión -->
             <img src="../img/admin.png" class="profile-pic" id="profilePic" alt="Admin" style="cursor: pointer;">
             
-            <!-- Sustitución de carrito por mas.png -->
             <img src="../img/mas.png" class="action-icon" alt="Agregar">
         </div>
     </header>
 
-    <!-- Navegación -->
     <nav class="admin-subnav">
-        <!-- Redirección a admin1.html -->
         <button class="nav-btn" onclick="window.location.href='admin1.html'">Productos</button>
         <button class="nav-btn active">ubicaciones</button>
-        <!-- Redirección a somosadmin.html -->
         <button class="nav-btn" onclick="window.location.href='somosadmin.html'">¿Quienes somos?</button>
     </nav>
 
-    <!-- Contenido Principal -->
     <main class="content-layout">
         <h2 class="section-title">UBICACIONES:</h2>
         
         <div class="locations-grid">
-            <!-- Columna Izquierda -->
             <div class="locations-column">
                 <div class="location-card">
                     <p><strong>Iztapalapa:</strong> Aldama s/n, Barrio San Lucas, C.P. 09000, Iztapalapa, CDMX.</p>
@@ -59,7 +50,6 @@
                 </div>
             </div>
 
-            <!-- Columna Derecha -->
             <div class="locations-column">
                 <div class="location-card">
                     <p><strong>Tláhuac:</strong> Calle Severino Ceniceros s/n, col. San Pedro Tláhuac, C.P. 13070, Tláhuac, CDMX.</p>
@@ -69,12 +59,10 @@
         </div>
     </main>
 
-    <!-- Modal de Cierre de Sesión -->
     <div id="logoutModal" class="modal-overlay">
         <div class="modal-content">
             <p>¿Desea cerrar sesión?</p>
             <div class="modal-buttons">
-                <!-- Redirige a la página principal de productos (vista cliente) -->
                 <button class="btn-modal accept" onclick="window.location.href='producto1.html'">Aceptar</button>
                 <button class="btn-modal cancel" id="closeModal">Cancelar</button>
             </div>

@@ -7,7 +7,6 @@
 
 body { background-color: #d3d3d3; }
 
-/* Navbar con degradado */
 .navbar-admin {
     background: linear-gradient(to right, #00bfff 0%, #7e7e7e 50%, #d35427 100%);
     height: 110px;
@@ -31,7 +30,6 @@ body { background-color: #d3d3d3; }
 .profile-pic { width: 45px; height: 45px; border: 2px solid white; border-radius: 4px; }
 .action-icon { width: 40px; height: 40px; }
 
-/* Carrito Badge */
 .cart-container { position: relative; }
 .cart-badge {
     position: absolute; top: -5px; right: -5px;
@@ -40,7 +38,6 @@ body { background-color: #d3d3d3; }
     border: 1px solid white;
 }
 
-/* Contenido del Carrito */
 .cart-content {
     max-width: 800px;
     margin: 40px auto;
@@ -60,7 +57,6 @@ body { background-color: #d3d3d3; }
 
 .empty-msg { text-align: center; color: #888; font-style: italic; }
 
-/* Resumen y Botón Pagar */
 .cart-summary {
     border-top: 2px solid #333;
     padding-top: 20px;
@@ -87,7 +83,6 @@ body { background-color: #d3d3d3; }
 
 .btn-pay:hover { background-color: #0099cc; transform: scale(1.05); }
 
-/* Modal */
 .modal-overlay { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); align-items: center; justify-content: center; }
 .modal-content { background: white; padding: 30px; border-radius: 12px; width: 300px; text-align: center; }
 .modal-buttons { display: flex; gap: 10px; margin-top: 20px; }

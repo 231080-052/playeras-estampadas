@@ -1,6 +1,4 @@
 /* Importación de fuente robusta */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -9,10 +7,9 @@
 }
 
 body {
-    background-color: #d3d3d3; /* Fondo gris claro general */
+    background-color: #d3d3d3; 
 }
 
-/* --- ENCABEZADO (NAVBAR) --- */
 .navbar {
     background: linear-gradient(to right, #3f90a5 0%, #7e7e7e 50%, #d35427 100%);
     display: flex;
@@ -29,7 +26,6 @@ body {
     border: 1px solid #ccc;
 }
 
-/* Barra de búsqueda */
 .search-container {
     display: flex;
     align-items: center;
@@ -47,7 +43,6 @@ body {
     font-size: 16px;
 }
 
-/* Imagen de la lupa dentro de la barra */
 .search-btn-img {
     width: 25px;
     height: 25px;
@@ -55,7 +50,6 @@ body {
     cursor: pointer;
 }
 
-/* Iconos de Usuario y Carrito fuera de la barra */
 .user-icons {
     display: flex;
     align-items: center;
@@ -80,7 +74,6 @@ body {
     transform: scale(1.1);
 }
 
-/* --- NAVEGACIÓN SECUNDARIA (BOTONES) --- */
 .sub-nav {
     display: flex;
     justify-content: center;
@@ -103,14 +96,13 @@ body {
     color: #fff !important;
 }
 
-/* --- GRID DE PRODUCTOS --- */
 .container {
     padding: 20px 50px;
 }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 25px;
 }
 
@@ -141,7 +133,6 @@ body {
     font-size: 18px;
 }
 
-/* --- PAGINACIÓN --- */
 .pagination {
     display: flex;
     justify-content: center;
@@ -151,7 +142,7 @@ body {
 }
 
 .pagination a {
-    text-decoration: none; /* Quita el subrayado de los enlaces */
+    text-decoration: none; 
 }
 
 .page-numbers {
@@ -180,7 +171,6 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Clase para resaltar la página donde está el usuario */
 .num-btn.active {
     background: #000;
     color: white;

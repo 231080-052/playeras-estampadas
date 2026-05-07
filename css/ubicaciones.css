@@ -1,6 +1,4 @@
 /* Importación de fuente robusta */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -9,15 +7,14 @@
 }
 
 body {
-    background-color: #d3d3d3; /* Fondo gris claro */
+    background-color: #d3d3d3; 
 }
 
-/* --- ENCABEZADO (NAVBAR) --- */
 .navbar {
     background: linear-gradient(to right, #3f90a5 0%, #7e7e7e 50%, #d35427 100%);
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Distribuye logo, buscador e iconos */
+    justify-content: space-between; 
     padding: 0 40px;
     height: 110px;
 }
@@ -29,7 +26,6 @@ body {
     border: 1px solid #ccc;
 }
 
-/* Barra de búsqueda */
 .search-container {
     display: flex;
     align-items: center;
@@ -47,7 +43,6 @@ body {
     font-size: 16px;
 }
 
-/* Imagen de la lupa dentro de la barra */
 .search-btn-img {
     width: 25px;
     height: 25px;
@@ -55,7 +50,6 @@ body {
     cursor: pointer;
 }
 
-/* Iconos de Usuario y Carrito fuera de la barra */
 .user-icons {
     display: flex;
     align-items: center;
@@ -69,7 +63,7 @@ body {
 }
 
 .icon {
-    width: 35px; /* Tamaño consistente para usuario.png y carrito.png */
+    width: 35px; 
     height: 35px;
     object-fit: contain;
     cursor: pointer;
@@ -80,7 +74,6 @@ body {
     transform: scale(1.1);
 }
 
-/* --- NAVEGACIÓN SECUNDARIA --- */
 .sub-nav {
     display: flex;
     justify-content: center;
@@ -104,7 +97,6 @@ body {
     color: #fff !important;
 }
 
-/* --- SECCIÓN DE UBICACIONES --- */
 .container {
     padding: 20px 50px;
 }

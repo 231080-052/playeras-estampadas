@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +9,6 @@ body {
     background-color: #d3d3d3;
 }
 
-/* --- ENCABEZADO --- */
 .navbar {
     background: linear-gradient(to right, #3f90a5 0%, #7e7e7e 50%, #d35427 100%);
     display: flex;
@@ -28,14 +25,13 @@ body {
     border: 1px solid #ccc;
 }
 
-/* Barra de búsqueda */
 .search-container {
     display: flex;
     align-items: center;
     background: white;
     border-radius: 30px;
     padding: 2px 15px;
-    width: 450px; /* Ancho ajustable */
+    width: 450px; 
 }
 
 .search-container input {
@@ -46,23 +42,21 @@ body {
     font-size: 16px;
 }
 
-/* Estilo para la nueva imagen lupa.png */
 .search-btn-img {
-    width: 25px; /* Tamaño ligeramente menor para caber dentro de la barra */
+    width: 25px; 
     height: 25px;
     object-fit: contain;
     cursor: pointer;
 }
 
-/* --- ICONOS FUERA DE LA BARRA --- */
 .user-icons {
     display: flex;
     align-items: center;
-    gap: 25px; /* Espacio entre usuario y carrito */
+    gap: 25px; 
 }
 
 .icon {
-    width: 35px; /* Tamaño consistente para usuario.png y carrito.png */
+    width: 35px; 
     height: 35px;
     object-fit: contain;
     cursor: pointer;
@@ -73,13 +67,11 @@ body {
     transform: scale(1.1);
 }
 
-/* Ajuste para el enlace del usuario */
 .user-icons a {
     display: flex;
     align-items: center;
 }
 
-/* --- NAVEGACIÓN (BOTONES ABAJO) --- */
 .sub-nav {
     display: flex;
     justify-content: center;

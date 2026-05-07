@@ -9,7 +9,6 @@ body {
     background-color: #d3d3d3;
 }
 
-/* --- NAVBAR --- */
 .navbar-admin {
     background: linear-gradient(to right, #2c7da0 0%, #a06b4d 50%, #d35427 100%);
     height: 110px;
@@ -58,14 +57,13 @@ body {
 }
 
 .profile-pic {
-    width: 45px; /* Tamaño igualado al signo de mas */
+    width: 45px;
     height: 45px;
     object-fit: cover;
     border: 2px solid white;
     border-radius: 4px;
 }
 
-/* --- SUBNAV --- */
 .admin-subnav {
     display: flex;
     justify-content: center;
@@ -88,7 +86,6 @@ body {
     color: white;
 }
 
-/* --- CONTENIDO --- */
 .main-content {
     display: flex;
     flex-direction: column;
@@ -108,7 +105,6 @@ body {
     border: 1px solid #bbb;
 }
 
-/* --- MODAL (Cerrar Sesión) --- */
 .modal-overlay {
     display: none;
     position: fixed;
