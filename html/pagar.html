@@ -11,7 +11,7 @@
     <div class="full-screen-container">
         <header class="form-header">
             <div class="header-content">
-                <h2>Datos de Transferencia</h2>
+                <h2>Datos de Pago</h2>
                 <a href="carrito.html" class="close-btn">&times;</a>
             </div>
         </header>
@@ -19,43 +19,27 @@
         <main class="form-body">
             <form id="paymentForm">
                 <div class="input-group">
-                    <label>Origen</label>
-                    <input type="text" placeholder="Cuenta de origen" required>
+                    <label>Numero de tarjeta</label>
+                    <input type="text" placeholder="00000000000000">
                 </div>
 
                 <div class="input-group">
-                    <label>Destino</label>
-                    <input type="text" placeholder="Cuenta de destino" required>
+                    <label>Nombre del titular</label>
+                    <input type="text" placeholder="Mombre completo">
                 </div>
 
                 <div class="input-group">
-                    <label>Comisión</label>
-                    <input type="text" placeholder="$0.00" readonly>
+                    <label>Fecha de vencimiento</label>
+                    <input type="text" placeholder="01/01/2027">
                 </div>
 
                 <div class="input-group">
-                    <label>Concepto</label>
-                    <input type="text" placeholder="Motivo del pago">
+                    <label>CVV</label>
+                    <input type="text" placeholder="Codigo seguridad">
                 </div>
-
-                <div class="input-group">
-                    <label>Referencia</label>
-                    <input type="text" placeholder="0123456789" readonly>
-                </div>
-
-                <div class="input-group">
-                    <label>Tipo de Operación</label>
-                    <input type="text" placeholder="Transferencia Electrónica" readonly>
-                </div>
-
-                <div class="input-group">
-                    <label>Folio</label>
-                    <input type="text" placeholder="FOLIO001" readonly>
-                </div>
-
-                <div class="input-group">
-                    <label>Fecha</label>
-                    <input type="date" value="2026-05-03">
+                                <div class="input-group">
+                    <label>Total</label>
+                    <input type="text" placeholder="$500" readonly>
                 </div>
 
                 <div class="button-container">
